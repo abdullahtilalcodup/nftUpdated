@@ -70,9 +70,7 @@ contract NFTA is ERC721A, Ownable {
 
         if (onlyWhiteListed == true) {
             if (
-                isWhiteListedO(msg.sender) &&
-                (whitelistStartTimeO < block.timestamp &&
-                    whitelistEndTimeO > block.timestamp)
+                isWhiteListedO(msg.sender) 
             ) {
                 require(
                     isWhiteListedO(msg.sender),
@@ -94,9 +92,7 @@ contract NFTA is ERC721A, Ownable {
                     _safeMint(msg.sender, paidMint);
                 }
             } else if (
-                isWhiteListedL(msg.sender) &&
-                (whitelistStartTimeL < block.timestamp &&
-                    whitelistEndTimeL > block.timestamp)
+                isWhiteListedL(msg.sender) 
             ) {
                 require(
                     isWhiteListedL(msg.sender),
